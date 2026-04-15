@@ -1,18 +1,17 @@
 import os
 import subprocess
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import ExecuteProcess, TimerAction
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    urdf_path = os.path.expanduser(
-        '~/ros2_ws/src/ground-robot-navigation/src/robot_description/urdf/robot.urdf.xacro'
-    )
+    pkg_share = get_package_share_directory('robot_description')
+    
+    urdf_path = os.path.join(pkg_share, 'urdf', 'robot.urdf.xacro')
     robot_description = subprocess.check_output(['xacro', urdf_path]).decode('utf-8')
 
-    world_path = os.path.expanduser(
-        '~/ros2_ws/src/ground-robot-navigation/src/robot_description/worlds/mar_world.sdf'
-    )
+    world_path = os.path.join(pkg_share, 'worlds', 'mar_world.sdf')
 
     rsp_node = Node(
         package='robot_state_publisher',
