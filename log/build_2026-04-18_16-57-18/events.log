@@ -1,0 +1,619 @@
+[0.000000] (-) TimerEvent: {}
+[0.003384] (robot_description) JobQueued: {'identifier': 'robot_description', 'dependencies': OrderedDict()}
+[0.005479] (robot_navigation) JobQueued: {'identifier': 'robot_navigation', 'dependencies': OrderedDict()}
+[0.007431] (robot_bringup) JobQueued: {'identifier': 'robot_bringup', 'dependencies': OrderedDict({'robot_description': '/mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description', 'robot_navigation': '/mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation'})}
+[0.008587] (robot_description) JobStarted: {'identifier': 'robot_description'}
+[0.091056] (-) TimerEvent: {}
+[0.157619] (robot_navigation) JobStarted: {'identifier': 'robot_navigation'}
+[0.193067] (-) TimerEvent: {}
+[0.297999] (-) TimerEvent: {}
+[0.377569] (robot_description) JobProgress: {'identifier': 'robot_description', 'progress': 'cmake'}
+[0.398375] (-) TimerEvent: {}
+[0.514994] (-) TimerEvent: {}
+[0.634923] (-) TimerEvent: {}
+[0.672602] (robot_description) JobProgress: {'identifier': 'robot_description', 'progress': 'build'}
+[0.735913] (-) TimerEvent: {}
+[0.780070] (robot_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description', '--', '-j12', '-l12'], 'cwd': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'nands', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/nands', 'OLDPWD': '/mnt/c/Users/nanda/Downloads/ros2_ws', 'NVM_BIN': '/home/nands/.nvm/versions/node/v22.21.0/bin', 'NVM_INC': '/home/nands/.nvm/versions/node/v22.21.0/include/node', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'NVM_DIR': '/home/nands/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'nands', 'NAME': 'DESKTOP-VUFQHN4', 'WSL_INTEROP': '/run/WSL/25220_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/nands/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/nands/.nvm/versions/node/v22.21.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/Docker/host/bin:/mnt/c/Program Files/nodejs/:/mnt/c/ngrok:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/nanda/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Roaming/npm:/mnt/c/Users/nanda/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Kiro/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[0.892450] (-) TimerEvent: {}
+[0.895694] (robot_navigation) JobProgress: {'identifier': 'robot_navigation', 'progress': 'cmake'}
+[0.993282] (-) TimerEvent: {}
+[1.020195] (robot_navigation) JobProgress: {'identifier': 'robot_navigation', 'progress': 'build'}
+[1.059939] (robot_navigation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation', '--', '-j12', '-l12'], 'cwd': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'nands', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/nands', 'OLDPWD': '/mnt/c/Users/nanda/Downloads/ros2_ws', 'NVM_BIN': '/home/nands/.nvm/versions/node/v22.21.0/bin', 'NVM_INC': '/home/nands/.nvm/versions/node/v22.21.0/include/node', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'NVM_DIR': '/home/nands/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'nands', 'NAME': 'DESKTOP-VUFQHN4', 'WSL_INTEROP': '/run/WSL/25220_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/nands/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/nands/.nvm/versions/node/v22.21.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/Docker/host/bin:/mnt/c/Program Files/nodejs/:/mnt/c/ngrok:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/nanda/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Roaming/npm:/mnt/c/Users/nanda/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Kiro/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[1.187526] (-) TimerEvent: {}
+[1.314021] (-) TimerEvent: {}
+[1.440801] (-) TimerEvent: {}
+[1.546061] (-) TimerEvent: {}
+[1.647590] (-) TimerEvent: {}
+[1.765199] (-) TimerEvent: {}
+[1.867191] (-) TimerEvent: {}
+[1.990269] (-) TimerEvent: {}
+[2.106992] (-) TimerEvent: {}
+[2.218762] (-) TimerEvent: {}
+[2.324100] (-) TimerEvent: {}
+[2.435967] (-) TimerEvent: {}
+[2.555956] (-) TimerEvent: {}
+[2.660011] (-) TimerEvent: {}
+[2.691369] (robot_description) CommandEnded: {'returncode': 0}
+[2.766015] (-) TimerEvent: {}
+[2.879172] (-) TimerEvent: {}
+[3.002038] (-) TimerEvent: {}
+[3.026024] (robot_description) JobProgress: {'identifier': 'robot_description', 'progress': 'install'}
+[3.102567] (-) TimerEvent: {}
+[3.133160] (robot_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description'], 'cwd': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'nands', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/nands', 'OLDPWD': '/mnt/c/Users/nanda/Downloads/ros2_ws', 'NVM_BIN': '/home/nands/.nvm/versions/node/v22.21.0/bin', 'NVM_INC': '/home/nands/.nvm/versions/node/v22.21.0/include/node', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'NVM_DIR': '/home/nands/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'nands', 'NAME': 'DESKTOP-VUFQHN4', 'WSL_INTEROP': '/run/WSL/25220_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/nands/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/nands/.nvm/versions/node/v22.21.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/Docker/host/bin:/mnt/c/Program Files/nodejs/:/mnt/c/ngrok:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/nanda/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Roaming/npm:/mnt/c/Users/nanda/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Kiro/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[3.166826] (robot_navigation) CommandEnded: {'returncode': 0}
+[3.214177] (-) TimerEvent: {}
+[3.247347] (robot_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.320307] (-) TimerEvent: {}
+[3.374010] (robot_description) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.432636] (robot_navigation) JobProgress: {'identifier': 'robot_navigation', 'progress': 'install'}
+[3.434161] (-) TimerEvent: {}
+[3.516879] (robot_navigation) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation'], 'cwd': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'nands', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/nands', 'OLDPWD': '/mnt/c/Users/nanda/Downloads/ros2_ws', 'NVM_BIN': '/home/nands/.nvm/versions/node/v22.21.0/bin', 'NVM_INC': '/home/nands/.nvm/versions/node/v22.21.0/include/node', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'NVM_DIR': '/home/nands/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'nands', 'NAME': 'DESKTOP-VUFQHN4', 'WSL_INTEROP': '/run/WSL/25220_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/nands/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/nands/.nvm/versions/node/v22.21.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/Docker/host/bin:/mnt/c/Program Files/nodejs/:/mnt/c/ngrok:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/nanda/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Roaming/npm:/mnt/c/Users/nanda/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Kiro/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[3.535852] (-) TimerEvent: {}
+[3.624636] (robot_navigation) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.642688] (-) TimerEvent: {}
+[3.755215] (-) TimerEvent: {}
+[3.783603] (robot_navigation) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.855992] (-) TimerEvent: {}
+[3.959086] (-) TimerEvent: {}
+[3.999288] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/launch/robot_gazebo.launch.py\n'}
+[4.059856] (-) TimerEvent: {}
+[4.164534] (-) TimerEvent: {}
+[4.277252] (-) TimerEvent: {}
+[4.385113] (-) TimerEvent: {}
+[4.404890] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/launch/navigation_launch.py\n'}
+[4.488088] (-) TimerEvent: {}
+[4.591679] (-) TimerEvent: {}
+[4.612788] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/urdf/robot.xacro\n'}
+[4.692801] (-) TimerEvent: {}
+[4.808219] (-) TimerEvent: {}
+[4.851304] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/launch/slam_launch.py\n'}
+[4.909343] (-) TimerEvent: {}
+[5.011780] (-) TimerEvent: {}
+[5.118316] (-) TimerEvent: {}
+[5.222895] (-) TimerEvent: {}
+[5.281078] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/config/gz_bridge.yaml\n'}
+[5.324078] (-) TimerEvent: {}
+[5.436179] (-) TimerEvent: {}
+[5.455231] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/config/nav2_params.yaml\n'}
+[5.537391] (-) TimerEvent: {}
+[5.638822] (-) TimerEvent: {}
+[5.655826] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/config/robot.rviz\n'}
+[5.740339] (-) TimerEvent: {}
+[5.847974] (-) TimerEvent: {}
+[5.862021] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/config/slam_toolbox_params.yaml\n'}
+[5.948123] (-) TimerEvent: {}
+[6.050478] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/config/slam.rviz\n'}
+[6.064469] (-) TimerEvent: {}
+[6.171679] (-) TimerEvent: {}
+[6.274972] (-) TimerEvent: {}
+[6.378892] (-) TimerEvent: {}
+[6.479775] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/maps/house_map.pgm\n'}
+[6.493848] (-) TimerEvent: {}
+[6.601928] (-) TimerEvent: {}
+[6.704616] (-) TimerEvent: {}
+[6.797537] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description\n'}
+[6.809549] (-) TimerEvent: {}
+[6.825280] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/maps/house_map.yaml\n'}
+[6.910067] (-) TimerEvent: {}
+[7.012861] (-) TimerEvent: {}
+[7.116113] (-) TimerEvent: {}
+[7.217815] (-) TimerEvent: {}
+[7.332907] (-) TimerEvent: {}
+[7.396727] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/package_run_dependencies/robot_navigation\n'}
+[7.402482] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description\n'}
+[7.433348] (-) TimerEvent: {}
+[7.535745] (-) TimerEvent: {}
+[7.603248] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/environment/ament_prefix_path.sh\n'}
+[7.638144] (-) TimerEvent: {}
+[7.742804] (-) TimerEvent: {}
+[7.848804] (-) TimerEvent: {}
+[7.899260] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/environment/ament_prefix_path.dsv\n'}
+[7.935781] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/parent_prefix_path/robot_navigation\n'}
+[7.955920] (-) TimerEvent: {}
+[8.067844] (-) TimerEvent: {}
+[8.170674] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/ament_prefix_path.sh\n'}
+[8.181958] (-) TimerEvent: {}
+[8.184233] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/environment/path.sh\n'}
+[8.282480] (-) TimerEvent: {}
+[8.383724] (-) TimerEvent: {}
+[8.497198] (-) TimerEvent: {}
+[8.505575] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/ament_prefix_path.dsv\n'}
+[8.521700] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/environment/path.dsv\n'}
+[8.600470] (-) TimerEvent: {}
+[8.703801] (-) TimerEvent: {}
+[8.760283] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/local_setup.bash\n'}
+[8.808475] (-) TimerEvent: {}
+[8.812236] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/path.sh\n'}
+[8.908762] (-) TimerEvent: {}
+[9.013475] (-) TimerEvent: {}
+[9.036543] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/local_setup.sh\n'}
+[9.113844] (-) TimerEvent: {}
+[9.218438] (-) TimerEvent: {}
+[9.301540] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/path.dsv\n'}
+[9.320759] (-) TimerEvent: {}
+[9.422094] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/local_setup.zsh\n'}
+[9.428092] (-) TimerEvent: {}
+[9.530544] (-) TimerEvent: {}
+[9.576875] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.bash\n'}
+[9.631995] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/local_setup.dsv\n'}
+[9.636585] (-) TimerEvent: {}
+[9.691531] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.sh\n'}
+[9.720126] (robot_description) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/package.dsv\n'}
+[9.736843] (-) TimerEvent: {}
+[9.833911] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.zsh\n'}
+[9.842998] (-) TimerEvent: {}
+[9.944322] (-) TimerEvent: {}
+[10.028691] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.dsv\n'}
+[10.047856] (-) TimerEvent: {}
+[10.098570] (robot_navigation) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/package.dsv\n'}
+[10.148263] (-) TimerEvent: {}
+[10.254007] (-) TimerEvent: {}
+[10.356606] (-) TimerEvent: {}
+[10.459491] (-) TimerEvent: {}
+[10.465504] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/ament_index/resource_index/packages/robot_description\n'}
+[10.560785] (-) TimerEvent: {}
+[10.663144] (-) TimerEvent: {}
+[10.769907] (-) TimerEvent: {}
+[10.850874] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/cmake/robot_descriptionConfig.cmake\n'}
+[10.874403] (-) TimerEvent: {}
+[10.977480] (-) TimerEvent: {}
+[11.046454] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/packages/robot_navigation\n'}
+[11.077902] (-) TimerEvent: {}
+[11.147878] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/cmake/robot_descriptionConfig-version.cmake\n'}
+[11.179788] (-) TimerEvent: {}
+[11.284134] (-) TimerEvent: {}
+[11.389290] (-) TimerEvent: {}
+[11.456488] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/cmake/robot_navigationConfig.cmake\n'}
+[11.489999] (-) TimerEvent: {}
+[11.531239] (robot_description) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/package.xml\n'}
+[11.557097] (robot_description) CommandEnded: {'returncode': 0}
+[11.606270] (-) TimerEvent: {}
+[11.708883] (-) TimerEvent: {}
+[11.800639] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/cmake/robot_navigationConfig-version.cmake\n'}
+[11.813033] (-) TimerEvent: {}
+[11.917818] (-) TimerEvent: {}
+[12.041586] (-) TimerEvent: {}
+[12.145951] (-) TimerEvent: {}
+[12.192466] (robot_navigation) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/package.xml\n'}
+[12.253007] (-) TimerEvent: {}
+[12.371244] (-) TimerEvent: {}
+[12.488534] (-) TimerEvent: {}
+[12.607924] (-) TimerEvent: {}
+[12.716168] (-) TimerEvent: {}
+[12.823918] (-) TimerEvent: {}
+[12.927389] (-) TimerEvent: {}
+[13.035402] (-) TimerEvent: {}
+[13.144972] (-) TimerEvent: {}
+[13.248086] (-) TimerEvent: {}
+[13.351287] (-) TimerEvent: {}
+[13.463894] (-) TimerEvent: {}
+[13.566544] (-) TimerEvent: {}
+[13.688583] (-) TimerEvent: {}
+[13.791428] (-) TimerEvent: {}
+[13.893706] (-) TimerEvent: {}
+[14.006458] (-) TimerEvent: {}
+[14.111175] (-) TimerEvent: {}
+[14.216235] (-) TimerEvent: {}
+[14.327803] (-) TimerEvent: {}
+[14.437049] (-) TimerEvent: {}
+[14.540815] (-) TimerEvent: {}
+[14.642649] (-) TimerEvent: {}
+[14.751970] (-) TimerEvent: {}
+[14.854341] (-) TimerEvent: {}
+[14.955985] (-) TimerEvent: {}
+[15.060133] (-) TimerEvent: {}
+[15.166680] (-) TimerEvent: {}
+[15.271902] (-) TimerEvent: {}
+[15.377101] (-) TimerEvent: {}
+[15.478859] (-) TimerEvent: {}
+[15.580933] (-) TimerEvent: {}
+[15.690243] (-) TimerEvent: {}
+[15.793920] (-) TimerEvent: {}
+[15.898345] (-) TimerEvent: {}
+[16.007717] (-) TimerEvent: {}
+[16.114663] (-) TimerEvent: {}
+[16.219446] (-) TimerEvent: {}
+[16.352934] (-) TimerEvent: {}
+[16.467922] (-) TimerEvent: {}
+[16.578428] (-) TimerEvent: {}
+[16.680727] (-) TimerEvent: {}
+[16.782108] (-) TimerEvent: {}
+[16.895808] (-) TimerEvent: {}
+[16.996951] (-) TimerEvent: {}
+[17.099344] (-) TimerEvent: {}
+[17.209395] (-) TimerEvent: {}
+[17.311469] (-) TimerEvent: {}
+[17.414215] (-) TimerEvent: {}
+[17.517349] (-) TimerEvent: {}
+[17.622905] (-) TimerEvent: {}
+[17.725112] (-) TimerEvent: {}
+[17.827034] (-) TimerEvent: {}
+[17.932207] (-) TimerEvent: {}
+[18.041392] (-) TimerEvent: {}
+[18.164667] (-) TimerEvent: {}
+[18.270099] (-) TimerEvent: {}
+[18.401896] (-) TimerEvent: {}
+[18.504711] (-) TimerEvent: {}
+[18.606940] (-) TimerEvent: {}
+[18.710625] (-) TimerEvent: {}
+[18.813947] (-) TimerEvent: {}
+[18.920092] (-) TimerEvent: {}
+[19.068735] (-) TimerEvent: {}
+[19.170663] (-) TimerEvent: {}
+[19.272280] (-) TimerEvent: {}
+[19.381116] (-) TimerEvent: {}
+[19.485331] (-) TimerEvent: {}
+[19.595556] (-) TimerEvent: {}
+[19.706540] (-) TimerEvent: {}
+[19.810969] (-) TimerEvent: {}
+[19.914108] (-) TimerEvent: {}
+[20.017825] (-) TimerEvent: {}
+[20.122263] (-) TimerEvent: {}
+[20.225434] (-) TimerEvent: {}
+[20.330897] (-) TimerEvent: {}
+[20.433721] (-) TimerEvent: {}
+[20.535926] (-) TimerEvent: {}
+[20.646208] (-) TimerEvent: {}
+[20.748124] (-) TimerEvent: {}
+[20.850605] (-) TimerEvent: {}
+[20.957460] (-) TimerEvent: {}
+[21.071449] (-) TimerEvent: {}
+[21.175784] (-) TimerEvent: {}
+[21.221647] (robot_description) JobEnded: {'identifier': 'robot_description', 'rc': 0}
+[21.357188] (-) TimerEvent: {}
+[21.363062] (robot_navigation) CommandEnded: {'returncode': 0}
+[21.457981] (-) TimerEvent: {}
+[21.563778] (-) TimerEvent: {}
+[21.676400] (-) TimerEvent: {}
+[21.780396] (-) TimerEvent: {}
+[21.885967] (-) TimerEvent: {}
+[21.990771] (-) TimerEvent: {}
+[22.099101] (-) TimerEvent: {}
+[22.213417] (-) TimerEvent: {}
+[22.322298] (-) TimerEvent: {}
+[22.432039] (-) TimerEvent: {}
+[22.539843] (-) TimerEvent: {}
+[22.652230] (-) TimerEvent: {}
+[22.756459] (-) TimerEvent: {}
+[22.857639] (-) TimerEvent: {}
+[22.961116] (-) TimerEvent: {}
+[23.067827] (-) TimerEvent: {}
+[23.173054] (-) TimerEvent: {}
+[23.282223] (-) TimerEvent: {}
+[23.393014] (-) TimerEvent: {}
+[23.500638] (-) TimerEvent: {}
+[23.612275] (-) TimerEvent: {}
+[23.724436] (-) TimerEvent: {}
+[23.830935] (-) TimerEvent: {}
+[23.933994] (-) TimerEvent: {}
+[24.036551] (-) TimerEvent: {}
+[24.153397] (-) TimerEvent: {}
+[24.262270] (-) TimerEvent: {}
+[24.364550] (-) TimerEvent: {}
+[24.481668] (-) TimerEvent: {}
+[24.594478] (-) TimerEvent: {}
+[24.708431] (-) TimerEvent: {}
+[24.817351] (-) TimerEvent: {}
+[24.920630] (-) TimerEvent: {}
+[25.025782] (-) TimerEvent: {}
+[25.130437] (-) TimerEvent: {}
+[25.238699] (-) TimerEvent: {}
+[25.353680] (-) TimerEvent: {}
+[25.460709] (-) TimerEvent: {}
+[25.572445] (-) TimerEvent: {}
+[25.677611] (-) TimerEvent: {}
+[25.788266] (-) TimerEvent: {}
+[25.892209] (-) TimerEvent: {}
+[26.003928] (-) TimerEvent: {}
+[26.109234] (-) TimerEvent: {}
+[26.210790] (-) TimerEvent: {}
+[26.312933] (-) TimerEvent: {}
+[26.420916] (-) TimerEvent: {}
+[26.523840] (-) TimerEvent: {}
+[26.637503] (-) TimerEvent: {}
+[26.751320] (-) TimerEvent: {}
+[26.856899] (-) TimerEvent: {}
+[26.959429] (-) TimerEvent: {}
+[27.070850] (-) TimerEvent: {}
+[27.175361] (-) TimerEvent: {}
+[27.288389] (-) TimerEvent: {}
+[27.390346] (-) TimerEvent: {}
+[27.492420] (-) TimerEvent: {}
+[27.596001] (-) TimerEvent: {}
+[27.698257] (-) TimerEvent: {}
+[27.813231] (-) TimerEvent: {}
+[27.928913] (-) TimerEvent: {}
+[28.030822] (-) TimerEvent: {}
+[28.140131] (-) TimerEvent: {}
+[28.255075] (-) TimerEvent: {}
+[28.361005] (-) TimerEvent: {}
+[28.463472] (-) TimerEvent: {}
+[28.565173] (-) TimerEvent: {}
+[28.676540] (-) TimerEvent: {}
+[28.790456] (-) TimerEvent: {}
+[28.897962] (-) TimerEvent: {}
+[29.001715] (-) TimerEvent: {}
+[29.115763] (-) TimerEvent: {}
+[29.217321] (-) TimerEvent: {}
+[29.326460] (-) TimerEvent: {}
+[29.428822] (-) TimerEvent: {}
+[29.537946] (-) TimerEvent: {}
+[29.644020] (-) TimerEvent: {}
+[29.749933] (-) TimerEvent: {}
+[29.864010] (-) TimerEvent: {}
+[29.973941] (-) TimerEvent: {}
+[30.076254] (-) TimerEvent: {}
+[30.204396] (-) TimerEvent: {}
+[30.308910] (-) TimerEvent: {}
+[30.442637] (-) TimerEvent: {}
+[30.555037] (-) TimerEvent: {}
+[30.698616] (-) TimerEvent: {}
+[30.804687] (-) TimerEvent: {}
+[30.917257] (-) TimerEvent: {}
+[31.024210] (-) TimerEvent: {}
+[31.132005] (-) TimerEvent: {}
+[31.239999] (-) TimerEvent: {}
+[31.344353] (-) TimerEvent: {}
+[31.460971] (-) TimerEvent: {}
+[31.517535] (robot_navigation) JobEnded: {'identifier': 'robot_navigation', 'rc': 0}
+[31.644111] (-) TimerEvent: {}
+[31.646839] (robot_bringup) JobStarted: {'identifier': 'robot_bringup'}
+[31.744327] (-) TimerEvent: {}
+[31.847469] (-) TimerEvent: {}
+[31.952847] (-) TimerEvent: {}
+[32.054382] (-) TimerEvent: {}
+[32.157107] (-) TimerEvent: {}
+[32.258965] (-) TimerEvent: {}
+[32.365236] (-) TimerEvent: {}
+[32.482076] (-) TimerEvent: {}
+[32.592422] (-) TimerEvent: {}
+[32.694774] (-) TimerEvent: {}
+[32.813769] (-) TimerEvent: {}
+[32.919957] (-) TimerEvent: {}
+[33.024560] (-) TimerEvent: {}
+[33.133286] (-) TimerEvent: {}
+[33.245401] (-) TimerEvent: {}
+[33.350809] (-) TimerEvent: {}
+[33.454704] (-) TimerEvent: {}
+[33.556272] (-) TimerEvent: {}
+[33.657911] (-) TimerEvent: {}
+[33.764005] (-) TimerEvent: {}
+[33.814613] (robot_bringup) JobProgress: {'identifier': 'robot_bringup', 'progress': 'cmake'}
+[33.874141] (-) TimerEvent: {}
+[33.977784] (-) TimerEvent: {}
+[34.080012] (robot_bringup) JobProgress: {'identifier': 'robot_bringup', 'progress': 'build'}
+[34.081697] (-) TimerEvent: {}
+[34.164010] (robot_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_bringup', '--', '-j12', '-l12'], 'cwd': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_bringup', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'nands', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/nands', 'OLDPWD': '/mnt/c/Users/nanda/Downloads/ros2_ws', 'NVM_BIN': '/home/nands/.nvm/versions/node/v22.21.0/bin', 'NVM_INC': '/home/nands/.nvm/versions/node/v22.21.0/include/node', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'NVM_DIR': '/home/nands/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'nands', 'NAME': 'DESKTOP-VUFQHN4', 'WSL_INTEROP': '/run/WSL/25220_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/nands/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/nands/.nvm/versions/node/v22.21.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/Docker/host/bin:/mnt/c/Program Files/nodejs/:/mnt/c/ngrok:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/nanda/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Roaming/npm:/mnt/c/Users/nanda/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Kiro/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation:/mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_bringup', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation:/mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[34.292653] (-) TimerEvent: {}
+[34.402497] (-) TimerEvent: {}
+[34.507061] (-) TimerEvent: {}
+[34.616104] (-) TimerEvent: {}
+[34.723226] (-) TimerEvent: {}
+[34.840317] (-) TimerEvent: {}
+[34.957568] (-) TimerEvent: {}
+[35.060879] (-) TimerEvent: {}
+[35.168257] (-) TimerEvent: {}
+[35.284632] (-) TimerEvent: {}
+[35.388183] (-) TimerEvent: {}
+[35.491125] (-) TimerEvent: {}
+[35.597044] (-) TimerEvent: {}
+[35.714829] (-) TimerEvent: {}
+[35.818327] (-) TimerEvent: {}
+[35.926771] (-) TimerEvent: {}
+[35.996571] (robot_bringup) CommandEnded: {'returncode': 0}
+[36.028348] (-) TimerEvent: {}
+[36.138946] (-) TimerEvent: {}
+[36.247247] (-) TimerEvent: {}
+[36.294033] (robot_bringup) JobProgress: {'identifier': 'robot_bringup', 'progress': 'install'}
+[36.339136] (robot_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_bringup'], 'cwd': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_bringup', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'nands', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/nands', 'OLDPWD': '/mnt/c/Users/nanda/Downloads/ros2_ws', 'NVM_BIN': '/home/nands/.nvm/versions/node/v22.21.0/bin', 'NVM_INC': '/home/nands/.nvm/versions/node/v22.21.0/include/node', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'NVM_DIR': '/home/nands/.nvm', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'nands', 'NAME': 'DESKTOP-VUFQHN4', 'WSL_INTEROP': '/run/WSL/25220_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/nands/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/nands/.nvm/versions/node/v22.21.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/nanda/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/Docker/host/bin:/mnt/c/Program Files/nodejs/:/mnt/c/ngrok:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/nanda/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nanda/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/nanda/AppData/Local/Programs/Python/Python313:/mnt/c/Users/nanda/AppData/Roaming/npm:/mnt/c/Users/nanda/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/nanda/AppData/Local/Programs/Kiro/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation:/mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_bringup', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation:/mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[36.366917] (-) TimerEvent: {}
+[36.479439] (-) TimerEvent: {}
+[36.505046] (robot_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[36.583985] (-) TimerEvent: {}
+[36.650359] (robot_bringup) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[36.684621] (-) TimerEvent: {}
+[36.793558] (-) TimerEvent: {}
+[36.908263] (-) TimerEvent: {}
+[37.012717] (-) TimerEvent: {}
+[37.044208] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/lib/robot_bringup/send_goal.py\n'}
+[37.114389] (-) TimerEvent: {}
+[37.218685] (-) TimerEvent: {}
+[37.327992] (-) TimerEvent: {}
+[37.432266] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/lib/robot_bringup/waypoint_navigator.py\n'}
+[37.439865] (-) TimerEvent: {}
+[37.543599] (-) TimerEvent: {}
+[37.648656] (-) TimerEvent: {}
+[37.762938] (-) TimerEvent: {}
+[37.867842] (-) TimerEvent: {}
+[37.980026] (-) TimerEvent: {}
+[38.085072] (-) TimerEvent: {}
+[38.094361] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/launch/nav_bringup.launch.py\n'}
+[38.185634] (-) TimerEvent: {}
+[38.292476] (-) TimerEvent: {}
+[38.394390] (-) TimerEvent: {}
+[38.478603] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/launch/slam_bringup.launch.py\n'}
+[38.495619] (-) TimerEvent: {}
+[38.597250] (-) TimerEvent: {}
+[38.700815] (-) TimerEvent: {}
+[38.803234] (-) TimerEvent: {}
+[38.915835] (-) TimerEvent: {}
+[39.018162] (-) TimerEvent: {}
+[39.123896] (-) TimerEvent: {}
+[39.228212] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/ament_index/resource_index/package_run_dependencies/robot_bringup\n'}
+[39.233391] (-) TimerEvent: {}
+[39.334582] (-) TimerEvent: {}
+[39.440152] (-) TimerEvent: {}
+[39.551984] (-) TimerEvent: {}
+[39.655358] (-) TimerEvent: {}
+[39.767968] (-) TimerEvent: {}
+[39.872494] (-) TimerEvent: {}
+[39.956851] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/ament_index/resource_index/parent_prefix_path/robot_bringup\n'}
+[39.974040] (-) TimerEvent: {}
+[40.083842] (-) TimerEvent: {}
+[40.193746] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/environment/ament_prefix_path.sh\n'}
+[40.206548] (-) TimerEvent: {}
+[40.308380] (-) TimerEvent: {}
+[40.412018] (-) TimerEvent: {}
+[40.515962] (-) TimerEvent: {}
+[40.613205] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/environment/ament_prefix_path.dsv\n'}
+[40.621676] (-) TimerEvent: {}
+[40.724099] (-) TimerEvent: {}
+[40.829075] (-) TimerEvent: {}
+[40.931792] (-) TimerEvent: {}
+[40.993844] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/environment/path.sh\n'}
+[41.031982] (-) TimerEvent: {}
+[41.138833] (-) TimerEvent: {}
+[41.249620] (-) TimerEvent: {}
+[41.394395] (-) TimerEvent: {}
+[41.447974] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/environment/path.dsv\n'}
+[41.494763] (-) TimerEvent: {}
+[41.600356] (-) TimerEvent: {}
+[41.708883] (-) TimerEvent: {}
+[41.774406] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/local_setup.bash\n'}
+[41.811263] (-) TimerEvent: {}
+[41.920432] (-) TimerEvent: {}
+[42.025822] (-) TimerEvent: {}
+[42.035214] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/local_setup.sh\n'}
+[42.135039] (-) TimerEvent: {}
+[42.237444] (-) TimerEvent: {}
+[42.296441] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/local_setup.zsh\n'}
+[42.339193] (-) TimerEvent: {}
+[42.447029] (-) TimerEvent: {}
+[42.474757] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/local_setup.dsv\n'}
+[42.547697] (-) TimerEvent: {}
+[42.561584] (robot_bringup) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/package.dsv\n'}
+[42.651110] (-) TimerEvent: {}
+[42.756025] (-) TimerEvent: {}
+[42.864349] (-) TimerEvent: {}
+[42.971606] (-) TimerEvent: {}
+[43.077413] (-) TimerEvent: {}
+[43.186148] (-) TimerEvent: {}
+[43.293015] (-) TimerEvent: {}
+[43.396084] (-) TimerEvent: {}
+[43.446923] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/ament_index/resource_index/packages/robot_bringup\n'}
+[43.497118] (-) TimerEvent: {}
+[43.604694] (-) TimerEvent: {}
+[43.709080] (-) TimerEvent: {}
+[43.816073] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/cmake/robot_bringupConfig.cmake\n'}
+[43.831947] (-) TimerEvent: {}
+[43.936142] (-) TimerEvent: {}
+[44.041116] (-) TimerEvent: {}
+[44.056613] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/cmake/robot_bringupConfig-version.cmake\n'}
+[44.141824] (-) TimerEvent: {}
+[44.251999] (-) TimerEvent: {}
+[44.353256] (-) TimerEvent: {}
+[44.409132] (robot_bringup) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_bringup/share/robot_bringup/package.xml\n'}
+[44.457673] (robot_bringup) CommandEnded: {'returncode': 0}
+[44.477508] (-) TimerEvent: {}
+[44.582031] (-) TimerEvent: {}
+[44.694074] (-) TimerEvent: {}
+[44.798694] (-) TimerEvent: {}
+[44.904273] (-) TimerEvent: {}
+[45.007227] (-) TimerEvent: {}
+[45.113716] (-) TimerEvent: {}
+[45.218611] (-) TimerEvent: {}
+[45.320597] (-) TimerEvent: {}
+[45.429764] (-) TimerEvent: {}
+[45.545204] (-) TimerEvent: {}
+[45.652965] (-) TimerEvent: {}
+[45.764747] (-) TimerEvent: {}
+[45.870122] (-) TimerEvent: {}
+[45.974222] (-) TimerEvent: {}
+[46.079774] (-) TimerEvent: {}
+[46.183026] (-) TimerEvent: {}
+[46.285439] (-) TimerEvent: {}
+[46.389593] (-) TimerEvent: {}
+[46.502205] (-) TimerEvent: {}
+[46.605913] (-) TimerEvent: {}
+[46.708197] (-) TimerEvent: {}
+[46.814493] (-) TimerEvent: {}
+[46.917644] (-) TimerEvent: {}
+[47.022224] (-) TimerEvent: {}
+[47.124507] (-) TimerEvent: {}
+[47.227893] (-) TimerEvent: {}
+[47.340096] (-) TimerEvent: {}
+[47.448563] (-) TimerEvent: {}
+[47.554562] (-) TimerEvent: {}
+[47.662124] (-) TimerEvent: {}
+[47.764504] (-) TimerEvent: {}
+[47.867401] (-) TimerEvent: {}
+[47.970426] (-) TimerEvent: {}
+[48.074295] (-) TimerEvent: {}
+[48.181363] (-) TimerEvent: {}
+[48.285389] (-) TimerEvent: {}
+[48.387967] (-) TimerEvent: {}
+[48.495303] (-) TimerEvent: {}
+[48.598112] (-) TimerEvent: {}
+[48.700409] (-) TimerEvent: {}
+[48.809485] (-) TimerEvent: {}
+[48.915157] (-) TimerEvent: {}
+[49.028543] (-) TimerEvent: {}
+[49.133274] (-) TimerEvent: {}
+[49.238214] (-) TimerEvent: {}
+[49.345344] (-) TimerEvent: {}
+[49.449049] (-) TimerEvent: {}
+[49.567758] (-) TimerEvent: {}
+[49.677513] (-) TimerEvent: {}
+[49.785997] (-) TimerEvent: {}
+[49.908420] (-) TimerEvent: {}
+[50.024821] (-) TimerEvent: {}
+[50.136507] (-) TimerEvent: {}
+[50.244543] (-) TimerEvent: {}
+[50.347298] (-) TimerEvent: {}
+[50.452161] (-) TimerEvent: {}
+[50.563477] (-) TimerEvent: {}
+[50.665834] (-) TimerEvent: {}
+[50.771311] (-) TimerEvent: {}
+[50.875903] (-) TimerEvent: {}
+[50.979210] (-) TimerEvent: {}
+[51.085790] (-) TimerEvent: {}
+[51.189234] (-) TimerEvent: {}
+[51.295975] (-) TimerEvent: {}
+[51.401134] (-) TimerEvent: {}
+[51.503053] (-) TimerEvent: {}
+[51.611794] (-) TimerEvent: {}
+[51.715733] (-) TimerEvent: {}
+[51.822357] (-) TimerEvent: {}
+[51.932720] (-) TimerEvent: {}
+[52.036642] (-) TimerEvent: {}
+[52.140476] (-) TimerEvent: {}
+[52.250566] (-) TimerEvent: {}
+[52.364247] (-) TimerEvent: {}
+[52.468922] (-) TimerEvent: {}
+[52.572622] (-) TimerEvent: {}
+[52.686392] (-) TimerEvent: {}
+[52.790650] (-) TimerEvent: {}
+[52.908540] (-) TimerEvent: {}
+[53.012924] (-) TimerEvent: {}
+[53.118226] (-) TimerEvent: {}
+[53.220554] (-) TimerEvent: {}
+[53.334811] (-) TimerEvent: {}
+[53.439980] (-) TimerEvent: {}
+[53.546064] (-) TimerEvent: {}
+[53.651145] (-) TimerEvent: {}
+[53.764609] (-) TimerEvent: {}
+[53.870995] (-) TimerEvent: {}
+[53.973315] (-) TimerEvent: {}
+[54.078134] (-) TimerEvent: {}
+[54.192872] (-) TimerEvent: {}
+[54.299104] (-) TimerEvent: {}
+[54.400824] (-) TimerEvent: {}
+[54.503199] (-) TimerEvent: {}
+[54.606923] (-) TimerEvent: {}
+[54.708663] (-) TimerEvent: {}
+[54.813883] (-) TimerEvent: {}
+[54.927850] (-) TimerEvent: {}
+[55.030721] (-) TimerEvent: {}
+[55.132657] (-) TimerEvent: {}
+[55.236639] (-) TimerEvent: {}
+[55.347322] (-) TimerEvent: {}
+[55.452068] (-) TimerEvent: {}
+[55.556113] (-) TimerEvent: {}
+[55.662454] (-) TimerEvent: {}
+[55.770884] (-) TimerEvent: {}
+[55.874769] (-) TimerEvent: {}
+[55.977380] (-) TimerEvent: {}
+[56.082278] (-) TimerEvent: {}
+[56.202763] (robot_bringup) JobEnded: {'identifier': 'robot_bringup', 'rc': 0}
+[56.429221] (-) TimerEvent: {}
+[56.442948] (-) EventReactorShutdown: {}

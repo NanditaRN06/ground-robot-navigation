@@ -1,0 +1,9 @@
+/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation/CMakeFiles/uninstall.dir
+/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation/CMakeFiles/robot_navigation_uninstall.dir
+/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation/CMakeFiles/test.dir
+/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation/CMakeFiles/edit_cache.dir
+/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation/CMakeFiles/list_install_components.dir
+/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation/CMakeFiles/install.dir
+/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation/CMakeFiles/install/local.dir
+/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation/CMakeFiles/install/strip.dir

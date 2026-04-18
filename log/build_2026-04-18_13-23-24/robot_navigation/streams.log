@@ -1,0 +1,27 @@
+[2.211s] Invoking command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation -- -j12 -l12
+[3.606s] Invoked command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation -- -j12 -l12
+[3.892s] Invoking command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation
+[4.001s] -- Install configuration: ""
+[4.154s] -- Execute custom install script
+[5.056s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/launch/navigation_launch.py
+[5.546s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/launch/slam_launch.py
+[6.393s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/config/nav2_params.yaml
+[6.992s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/config/slam_toolbox_params.yaml
+[7.574s] -- Symlinking: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/maps/house_map.pgm
+[8.640s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/maps/house_map.yaml
+[9.716s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/package_run_dependencies/robot_navigation
+[10.704s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/parent_prefix_path/robot_navigation
+[10.827s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/ament_prefix_path.sh
+[11.029s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/ament_prefix_path.dsv
+[11.217s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/path.sh
+[11.560s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/path.dsv
+[12.106s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.bash
+[12.664s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.sh
+[13.192s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.zsh
+[13.622s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.dsv
+[13.865s] -- Symlinking: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/package.dsv
+[15.412s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/packages/robot_navigation
+[15.637s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/cmake/robot_navigationConfig.cmake
+[15.897s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/cmake/robot_navigationConfig-version.cmake
+[16.293s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/package.xml
+[29.284s] Invoked command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation

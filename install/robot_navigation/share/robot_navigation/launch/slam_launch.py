@@ -1,0 +1,1 @@
+/mnt/c/Users/nanda/Downloads/ros2_ws/src/robot_navigation/launch/slam_launch.py

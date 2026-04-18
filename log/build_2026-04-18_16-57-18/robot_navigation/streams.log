@@ -1,0 +1,27 @@
+[1.019s] Invoking command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation -- -j12 -l12
+[3.012s] Invoked command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation -- -j12 -l12
+[3.363s] Invoking command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation
+[3.480s] -- Install configuration: ""
+[3.640s] -- Execute custom install script
+[4.254s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/launch/navigation_launch.py
+[4.707s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/launch/slam_launch.py
+[5.301s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/config/nav2_params.yaml
+[5.714s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/config/slam_toolbox_params.yaml
+[6.334s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/maps/house_map.pgm
+[6.674s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/maps/house_map.yaml
+[7.242s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/package_run_dependencies/robot_navigation
+[7.781s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/parent_prefix_path/robot_navigation
+[8.022s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/ament_prefix_path.sh
+[8.351s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/ament_prefix_path.dsv
+[8.656s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/path.sh
+[9.144s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/path.dsv
+[9.421s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.bash
+[9.540s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.sh
+[9.681s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.zsh
+[9.877s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.dsv
+[9.945s] -- Symlinking: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/package.dsv
+[10.897s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/packages/robot_navigation
+[11.308s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/cmake/robot_navigationConfig.cmake
+[11.652s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/cmake/robot_navigationConfig-version.cmake
+[12.039s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/package.xml
+[21.213s] Invoked command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation

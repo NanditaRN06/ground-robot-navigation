@@ -1,0 +1,26 @@
+[0.818s] Invoking command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description -- -j12 -l12
+[1.197s] Invoked command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description -- -j12 -l12
+[1.302s] Invoking command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description
+[1.335s] -- Install configuration: ""
+[1.369s] -- Execute custom install script
+[1.514s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/launch/robot_gazebo.launch.py
+[1.719s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/urdf/robot.xacro
+[1.907s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/config/gz_bridge.yaml
+[2.020s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/config/robot.rviz
+[2.158s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/config/slam.rviz
+[2.345s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
+[2.526s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description
+[2.599s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/environment/ament_prefix_path.sh
+[2.703s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/environment/ament_prefix_path.dsv
+[2.769s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/environment/path.sh
+[2.841s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/environment/path.dsv
+[2.898s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/local_setup.bash
+[2.955s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/local_setup.sh
+[3.002s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/local_setup.zsh
+[3.051s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/local_setup.dsv
+[3.076s] -- Symlinking: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/package.dsv
+[3.226s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/ament_index/resource_index/packages/robot_description
+[3.272s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/cmake/robot_descriptionConfig.cmake
+[3.332s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/cmake/robot_descriptionConfig-version.cmake
+[3.397s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_description/share/robot_description/package.xml
+[3.407s] Invoked command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_description

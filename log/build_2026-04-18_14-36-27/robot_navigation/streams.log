@@ -1,0 +1,27 @@
+[0.649s] Invoking command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation -- -j12 -l12
+[1.053s] Invoked command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation -- -j12 -l12
+[1.113s] Invoking command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation
+[1.141s] -- Install configuration: ""
+[1.168s] -- Execute custom install script
+[1.371s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/launch/navigation_launch.py
+[1.500s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/launch/slam_launch.py
+[1.672s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/config/nav2_params.yaml
+[1.787s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/config/slam_toolbox_params.yaml
+[1.995s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/maps/house_map.pgm
+[2.076s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/maps/house_map.yaml
+[2.259s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/package_run_dependencies/robot_navigation
+[2.459s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/parent_prefix_path/robot_navigation
+[2.521s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/ament_prefix_path.sh
+[2.596s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/ament_prefix_path.dsv
+[2.651s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/path.sh
+[2.722s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/environment/path.dsv
+[2.772s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.bash
+[2.822s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.sh
+[2.865s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.zsh
+[2.906s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/local_setup.dsv
+[2.924s] -- Symlinking: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/package.dsv
+[3.091s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/ament_index/resource_index/packages/robot_navigation
+[3.155s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/cmake/robot_navigationConfig.cmake
+[3.205s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/cmake/robot_navigationConfig-version.cmake
+[3.256s] -- Up-to-date symlink: /mnt/c/Users/nanda/Downloads/ros2_ws/install/robot_navigation/share/robot_navigation/package.xml
+[5.365s] Invoked command in '/mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /mnt/c/Users/nanda/Downloads/ros2_ws/build/robot_navigation
