@@ -45,9 +45,11 @@ def generate_launch_description():
         }.items(),
     )
 
-    # ── Nav2 — delayed 8s for Gazebo to fully load ────────────────────────
+    # ── Nav2 — delayed 25s for Gazebo to load AND robot to be spawned ────
+    # robot_gazebo.launch.py delays spawn by 15s; Nav2 needs the odom frame
+    # which only appears after DiffDrive activates post-spawn.
     nav2_launch = TimerAction(
-        period=8.0,
+        period=25.0,
         actions=[
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
@@ -63,9 +65,9 @@ def generate_launch_description():
         ],
     )
 
-    # ── Waypoint navigator — delayed 40s to let Nav2 fully activate ───────
+    # ── Waypoint navigator — delayed 60s to let Nav2 fully activate ───────
     waypoint_navigator = TimerAction(
-        period=40.0,
+        period=60.0,
         actions=[
             Node(
                 package="robot_bringup",

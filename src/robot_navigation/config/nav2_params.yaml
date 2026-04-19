@@ -24,7 +24,7 @@ amcl:
     lambda_short: 0.1
     laser_likelihood_max_dist: 2.0
     laser_max_range: 10.0
-    laser_min_range: 0.12
+    laser_min_range: 0.22
     laser_model_type: "likelihood_field"
     max_beams: 60
     max_particles: 2000
@@ -340,8 +340,50 @@ velocity_smoother:
     velocity_timeout: 1.0
 
 # ═══════════════════════════════════════════════════════════
-# lifecycle_manager for localization stack
+# collision_monitor  –  Safety layer: stops/slows when obstacle
+#                       is detected within a safety polygon
 # ═══════════════════════════════════════════════════════════
+collision_monitor:
+  ros__parameters:
+    use_sim_time: true
+    base_frame_id: "base_footprint"
+    odom_frame_id: "odom"
+    cmd_vel_in_topic: "cmd_vel_smoothed"
+    cmd_vel_out_topic: "cmd_vel"
+    state_topic: "collision_monitor_state"
+    transform_tolerance: 0.5
+    source_timeout: 5.0
+    base_shift_correction: true
+    stop_pub_timeout: 2.0
+    enabled: true
+    # Forward-only zones: stops/slows only when obstacles are directly ahead.
+    # A full circle in tight indoor spaces triggers on nearby walls constantly.
+    polygons: ["PolygonStop", "PolygonSlow"]
+    PolygonStop:
+      type: "polygon"
+      points: "[[0.25, 0.25], [0.25, -0.25], [-0.25, -0.25], [-0.25, 0.25]]"
+      action_type: "stop"
+      min_points: 4
+      visualize: true
+      polygon_pub_topic: "polygon_stop"
+      enabled: true
+    PolygonSlow:
+      type: "polygon"
+      points: "[[0.7, 0.35], [0.7, -0.35], [-0.25, -0.35], [-0.25, 0.35]]"
+      action_type: "slowdown"
+      slowdown_ratio: 0.5
+      min_points: 4
+      visualize: true
+      polygon_pub_topic: "polygon_slow"
+      enabled: true
+    observation_sources: ["scan"]
+    scan:
+      type: "scan"
+      topic: "/scan"
+      min_height: 0.1
+      max_height: 2.0
+      enabled: true
+
 lifecycle_manager_localization:
   ros__parameters:
     use_sim_time: true
@@ -363,3 +405,38 @@ lifecycle_manager_navigation:
       - bt_navigator
       - waypoint_follower
       - velocity_smoother
+      - collision_monitor
+
+# ═════════════════════════════════════════════════════════════════════
+# docking_server  –  Docking/undocking server
+# ═════════════════════════════════════════════════════════════
+docking_server:
+  ros__parameters:
+    use_sim_time: true
+    controller_frequency: 50.0
+    initial_perception_timeout: 5.0
+    wait_charge_timeout: 5.0
+    dock_approach_timeout: 30.0
+    undock_linear_tolerance: 0.05
+    undock_angular_tolerance: 0.1
+    max_retries: 3
+    base_frame: "base_link"
+    fixed_frame: "odom"
+    odom_topic: "odom"
+    odom_duration: 0.3
+    dock_backwards: false
+    dock_prestaging_tolerance: 0.5
+    introspection_mode: "disabled"
+    docks: ['home_dock']
+    home_dock:
+      type: 'simple_charging_dock'
+      frame: 'map'
+      pose: [0.0, 0.0, 0.0]
+    dock_plugins: ['simple_charging_dock']
+    simple_charging_dock:
+      plugin: 'opennav_docking::SimpleChargingDock'
+      dock_radius: 0.3
+      dock_angle_tolerance: 0.1
+      approach_standoff_distance: 0.35
+      dock_width: 0.3
+      rotate_to_dock: false

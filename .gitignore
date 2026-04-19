@@ -1,0 +1,20 @@
+# Build outputs
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Text editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# maps
+.pgm

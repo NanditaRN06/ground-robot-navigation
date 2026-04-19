@@ -150,7 +150,7 @@ Wait ~5 seconds for Gazebo to fully load and SLAM to activate, then:
 **Terminal 2 — RViz2** (launch after Gazebo is up):
 ```bash
 source ~/ros2_ws/install/setup.bash
-rviz2 -d ~/ros2_ws/src/robot_description/config/slam.rviz
+rviz2 -d src/robot_description/config/slam.rviz
 ```
 
 **Terminal 3 — Teleop** (drive the robot to build the map):

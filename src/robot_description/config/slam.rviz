@@ -66,6 +66,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         caster_link:
           Alpha: 1
           Show Axes: false
@@ -167,6 +172,8 @@ Visualization Manager:
           Value: true
         base_link:
           Value: true
+        camera_link:
+          Value: true
         caster_link:
           Value: true
         imu_link:
@@ -174,6 +181,8 @@ Visualization Manager:
         left_wheel:
           Value: true
         lidar_link:
+          Value: true
+        map:
           Value: true
         odom:
           Value: true
@@ -185,19 +194,22 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        odom:
-          base_footprint:
-            base_link:
-              caster_link:
-                {}
-              imu_link:
-                {}
-              left_wheel:
-                {}
-              lidar_link:
-                {}
-              right_wheel:
-                {}
+        map:
+          odom:
+            base_footprint:
+              base_link:
+                camera_link:
+                  {}
+                caster_link:
+                  {}
+                imu_link:
+                  {}
+                left_wheel:
+                  {}
+                lidar_link:
+                  {}
+                right_wheel:
+                  {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -244,10 +256,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1
+      Pitch: 0.7350002527236938
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.711999893188477
+      Yaw: 4.9019999504089355
     Saved: ~
 Window Geometry:
   Displays:
@@ -263,5 +275,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1400
-  X: 278
-  Y: 15
+  X: 481
+  Y: -26

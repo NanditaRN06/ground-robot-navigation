@@ -26,6 +26,12 @@
     </plugin>
     <plugin filename="gz-sim-contact-system"
             name="gz::sim::systems::Contact"/>
+    <!-- Pose publisher for robot pose to ROS TF -->
+    <plugin filename="gz-sim-pose-publisher-system"
+            name="gz::sim::systems::PosePublisher">
+      <publish>true</publish>
+      <publish_intra_process>true</publish_intra_process>
+    </plugin>
 
     <!-- ── Lighting ─────────────────────────────────────────────────────── -->
     <light type="directional" name="sun">

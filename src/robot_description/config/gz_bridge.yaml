@@ -14,6 +14,7 @@
   direction: ROS_TO_GZ
 
 # ── TF from odometry (Gazebo → ROS 2 TF tree) ─────────────────────────────
+# The DiffDrive plugin publishes TF to /tf topic
 - ros_topic_name: "/tf"
   gz_topic_name:  "/tf"
   ros_type_name:  "tf2_msgs/msg/TFMessage"

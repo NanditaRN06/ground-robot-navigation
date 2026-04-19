@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cleaner_robot">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ground_robot">
 
   <!-- ============================
        PROPERTIES / CONSTANTS
@@ -292,7 +292,13 @@
   <gazebo reference="lidar_link">
     <sensor name="lidar" type="gpu_lidar">
       <topic>scan</topic>
-      <update_rate>10</update_rate>
+      <!-- gz_frame_id overrides Gazebo's auto-generated frame name.
+           Without this, Gazebo Harmonic merges fixed joints and publishes
+           frame_id='ground_robot/base_footprint/lidar'. With this tag,
+           the ROS scan message uses frame_id='lidar_link' which matches
+           our TF tree and SLAM toolbox config. -->
+      <gz_frame_id>lidar_link</gz_frame_id>
+      <update_rate>5</update_rate>
       <always_on>true</always_on>
       <visualize>true</visualize>
       <lidar>
@@ -305,7 +311,7 @@
           </horizontal>
         </scan>
         <range>
-          <min>0.12</min>
+          <min>0.22</min>
           <max>12.0</max>
           <resolution>0.01</resolution>
         </range>
