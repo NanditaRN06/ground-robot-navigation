@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ground_robot">
 
-  <!-- ============================
-       PROPERTIES / CONSTANTS
-       ============================ -->
+  <!-- PROPERTIES / CONSTANTS -->
   <xacro:property name="robot_name"      value="ground_cleaner"/>
   <xacro:property name="base_radius"     value="0.19"/>
   <xacro:property name="base_height"     value="0.08"/>
@@ -27,9 +25,7 @@
   <!-- PI constant -->
   <xacro:property name="PI" value="3.14159265358979"/>
 
-  <!-- ============================
-       INERTIA MACROS
-       ============================ -->
+  <!-- INERTIA MACROS -->
   <xacro:macro name="box_inertia" params="m x y z">
     <inertia  ixx="${m*(y*y+z*z)/12}" ixy="0" ixz="0"
               iyy="${m*(x*x+z*z)/12}" iyz="0"
@@ -48,9 +44,7 @@
               izz="${2*m*r*r/5}" />
   </xacro:macro>
 
-  <!-- ============================
-       BASE FOOTPRINT (TF origin)
-       ============================ -->
+  <!-- BASE FOOTPRINT (TF origin) -->
   <link name="base_footprint"/>
 
   <joint name="base_footprint_joint" type="fixed">
@@ -59,9 +53,7 @@
     <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0"/>
   </joint>
 
-  <!-- ============================
-       CHASSIS
-       ============================ -->
+  <!-- CHASSIS -->
   <link name="base_link">
     <visual>
       <geometry>
@@ -101,9 +93,7 @@
     </inertial>
   </link>
 
-  <!-- ============================
-       WHEEL MACRO
-       ============================ -->
+  <!-- WHEEL MACRO -->
   <xacro:macro name="wheel" params="prefix side reflect">
     <link name="${prefix}_wheel">
       <visual>
@@ -140,9 +130,7 @@
   <xacro:wheel prefix="left"  side="left"  reflect="1"/>
   <xacro:wheel prefix="right" side="right" reflect="-1"/>
 
-  <!-- ============================
-       CASTER WHEEL (front)
-       ============================ -->
+  <!-- CASTER WHEEL (front) -->
   <link name="caster_link">
     <visual>
       <geometry>
@@ -170,9 +158,7 @@
     <origin xyz="${base_radius*0.6} 0 ${-(wheel_radius - caster_radius)}" rpy="0 0 0"/>
   </joint>
 
-  <!-- ============================
-       LIDAR MOUNT
-       ============================ -->
+  <!-- LIDAR MOUNT -->
   <link name="lidar_link">
     <visual>
       <geometry>
@@ -200,9 +186,7 @@
     <origin xyz="0 0 ${base_height/2 + lidar_height/2}" rpy="0 0 0"/>
   </joint>
 
-  <!-- ============================
-       IMU LINK
-       ============================ -->
+  <!-- IMU LINK -->
   <link name="imu_link">
     <visual>
       <geometry>
@@ -225,9 +209,7 @@
     <origin xyz="0 0 ${base_height/4}" rpy="0 0 0"/>
   </joint>
 
-  <!-- ============================
-       CAMERA LINK
-       ============================ -->
+  <!-- CAMERA LINK -->
   <link name="camera_link">
     <visual>
       <geometry>
@@ -255,9 +237,7 @@
     <origin xyz="0 ${base_radius*0.8} ${base_height/2 + 0.02}" rpy="0 0 0"/>
   </joint>
 
-  <!-- ============================
-       GAZEBO PLUGINS (Harmonic / gz-sim)
-       ============================ -->
+  <!-- GAZEBO PLUGINS (Harmonic / gz-sim) -->
 
   <!-- Differential drive controller -->
   <gazebo>
@@ -292,11 +272,7 @@
   <gazebo reference="lidar_link">
     <sensor name="lidar" type="gpu_lidar">
       <topic>scan</topic>
-      <!-- gz_frame_id overrides Gazebo's auto-generated frame name.
-           Without this, Gazebo Harmonic merges fixed joints and publishes
-           frame_id='ground_robot/base_footprint/lidar'. With this tag,
-           the ROS scan message uses frame_id='lidar_link' which matches
-           our TF tree and SLAM toolbox config. -->
+      <!-- gz_frame_id overrides Gazebo's auto-generated frame name. -->
       <gz_frame_id>lidar_link</gz_frame_id>
       <update_rate>5</update_rate>
       <always_on>true</always_on>

@@ -1,12 +1,10 @@
 # Nav2 Parameters for Ground Robot
 # ROS 2 Jazzy / Nav2 (navigation2)
 # Compatible with nav2_bringup bringup_launch.py
-#
+
 # Robot: Differential drive, 0.40m x 0.30m chassis, 0.12m wheel radius
 
-# ═══════════════════════════════════════════════════════════
-# amcl  –  Adaptive Monte Carlo Localization
-# ═══════════════════════════════════════════════════════════
+# AMCL - Adaptive Monte Carlo Localization - Localization for ground robot
 amcl:
   ros__parameters:
     use_sim_time: true
@@ -57,9 +55,7 @@ amcl:
     always_reset_initial_pose: false
     first_map_only: false
 
-# ═══════════════════════════════════════════════════════════
-# bt_navigator  –  Behavior Tree Navigator
-# ═══════════════════════════════════════════════════════════
+# Behavior Tree Navigator - Behavior Trees for Navigation
 bt_navigator:
   ros__parameters:
     use_sim_time: true
@@ -79,9 +75,7 @@ bt_navigator:
       - compute_path_error_code
       - follow_path_error_code
 
-# ═══════════════════════════════════════════════════════════
-# controller_server  –  Local Path Controller (DWB)
-# ═══════════════════════════════════════════════════════════
+# Controller Server - Local Path Controller (DWB) - Controller for Local path
 controller_server:
   ros__parameters:
     use_sim_time: true
@@ -146,9 +140,7 @@ controller_server:
       RotateToGoal.slowing_factor: 5.0
       RotateToGoal.lookahead_time: -1.0
 
-# ═══════════════════════════════════════════════════════════
-# local_costmap  –  Local costmap (obstacle avoidance)
-# ═══════════════════════════════════════════════════════════
+# Local costmap - Local costmap for obstacle avoidance
 local_costmap:
   local_costmap:
     ros__parameters:
@@ -192,9 +184,7 @@ local_costmap:
         map_subscribe_transient_local: true
       always_send_full_costmap: true
 
-# ═══════════════════════════════════════════════════════════
-# global_costmap  –  Global costmap (path planning)
-# ═══════════════════════════════════════════════════════════
+# Global costmap - Global costmap for path planning
 global_costmap:
   global_costmap:
     ros__parameters:
@@ -230,17 +220,13 @@ global_costmap:
         inflation_radius: 0.55
       always_send_full_costmap: true
 
-# ═══════════════════════════════════════════════════════════
-# map_server
-# ═══════════════════════════════════════════════════════════
+# Map Server - Map server for ground robot
 map_server:
   ros__parameters:
     use_sim_time: true
     yaml_filename: ""          # overridden by launch argument
 
-# ═══════════════════════════════════════════════════════════
-# map_saver
-# ═══════════════════════════════════════════════════════════
+# Map saver - Map saver for ground robot
 map_saver:
   ros__parameters:
     use_sim_time: true
@@ -249,9 +235,7 @@ map_saver:
     occupied_thresh_default: 0.65
     map_subscribe_transient_local: true
 
-# ═══════════════════════════════════════════════════════════
-# planner_server  –  Global path planner (NavFn / A* / Smac)
-# ═══════════════════════════════════════════════════════════
+# Planner Server - Global path planner (NavFn / A* / Smac) - Path planning for ground robot
 planner_server:
   ros__parameters:
     expected_planner_frequency: 20.0
@@ -263,9 +247,7 @@ planner_server:
       allow_unknown: true
       tolerance: 0.5
 
-# ═══════════════════════════════════════════════════════════
-# smoother_server
-# ═══════════════════════════════════════════════════════════
+#smoother_server
 smoother_server:
   ros__parameters:
     use_sim_time: true
@@ -276,9 +258,7 @@ smoother_server:
       max_its: 1000
       do_refinement: true
 
-# ═══════════════════════════════════════════════════════════
-# behavior_server  –  Recovery behaviors
-# ═══════════════════════════════════════════════════════════
+# Recovery behaviors
 behavior_server:
   ros__parameters:
     local_costmap_topic: local_costmap/costmap_raw
@@ -307,9 +287,7 @@ behavior_server:
     min_rotational_vel: 0.4
     rotational_acc_lim: 3.2
 
-# ═══════════════════════════════════════════════════════════
-# waypoint_follower
-# ═══════════════════════════════════════════════════════════
+# Waypoint follower
 waypoint_follower:
   ros__parameters:
     use_sim_time: true
@@ -321,9 +299,7 @@ waypoint_follower:
       enabled: true
       waypoint_pause_duration: 200
 
-# ═══════════════════════════════════════════════════════════
-# velocity_smoother
-# ═══════════════════════════════════════════════════════════
+# Velocity smoother
 velocity_smoother:
   ros__parameters:
     use_sim_time: true
@@ -339,10 +315,7 @@ velocity_smoother:
     deadband_velocity: [0.0, 0.0, 0.0]
     velocity_timeout: 1.0
 
-# ═══════════════════════════════════════════════════════════
-# collision_monitor  –  Safety layer: stops/slows when obstacle
-#                       is detected within a safety polygon
-# ═══════════════════════════════════════════════════════════
+# Collision monitor - Safety layer: stops/slows when obstacle
 collision_monitor:
   ros__parameters:
     use_sim_time: true
@@ -356,8 +329,6 @@ collision_monitor:
     base_shift_correction: true
     stop_pub_timeout: 2.0
     enabled: true
-    # Forward-only zones: stops/slows only when obstacles are directly ahead.
-    # A full circle in tight indoor spaces triggers on nearby walls constantly.
     polygons: ["PolygonStop", "PolygonSlow"]
     PolygonStop:
       type: "polygon"
@@ -390,9 +361,7 @@ lifecycle_manager_localization:
     autostart: true
     node_names: ["map_server", "amcl"]
 
-# ═══════════════════════════════════════════════════════════
-# lifecycle_manager for navigation stack
-# ═══════════════════════════════════════════════════════════
+# Lifecycle manager for navigation stack
 lifecycle_manager_navigation:
   ros__parameters:
     use_sim_time: true
@@ -407,9 +376,7 @@ lifecycle_manager_navigation:
       - velocity_smoother
       - collision_monitor
 
-# ═════════════════════════════════════════════════════════════════════
-# docking_server  –  Docking/undocking server
-# ═════════════════════════════════════════════════════════════
+# Docking/undocking server
 docking_server:
   ros__parameters:
     use_sim_time: true

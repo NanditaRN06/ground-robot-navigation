@@ -10,14 +10,13 @@ Usage:
 """
 
 import math
-import rclpy
-from rclpy.node import Node
-from rclpy.action import ActionClient
-from nav2_msgs.action import NavigateToPose
-from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped
-from action_msgs.msg import GoalStatus
-from rclpy.qos import QoSProfile, DurabilityPolicy, ReliabilityPolicy
-
+import rclpy # type: ignore 
+from rclpy.node import Node # type: ignore  
+from rclpy.action import ActionClient # type: ignore 
+from nav2_msgs.action import NavigateToPose # type: ignore 
+from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped # type: ignore 
+from action_msgs.msg import GoalStatus # type: ignore 
+from rclpy.qos import QoSProfile, DurabilityPolicy, ReliabilityPolicy # type: ignore 
 
 # (x, y, yaw_degrees) — relative to map origin, matching spawn at (1.0, 1.0)
 DEFAULT_WAYPOINTS = [
@@ -27,9 +26,8 @@ DEFAULT_WAYPOINTS = [
     (1.0,  1.0, -90.0),
 ]
 
-
+# Waypoint Navigator class
 class WaypointNavigator(Node):
-
     def __init__(self):
         super().__init__("waypoint_navigator")
 
@@ -46,27 +44,23 @@ class WaypointNavigator(Node):
         self._started    = False
         self._pose_published = False
 
-        # Publish initial pose with transient-local so AMCL gets it even if
-        # it subscribes slightly after we publish
+        # Publish initial pose with transient-local so AMCL gets it even if subscribes slightly after we publish
         qos = QoSProfile(
             depth=1,
             durability=DurabilityPolicy.TRANSIENT_LOCAL,
             reliability=ReliabilityPolicy.RELIABLE,
         )
-        self._init_pose_pub = self.create_publisher(
-            PoseWithCovarianceStamped, "/initialpose", qos
-        )
+        self._init_pose_pub = self.create_publisher(PoseWithCovarianceStamped, "/initialpose", qos)
 
         self._action_client = ActionClient(self, NavigateToPose, "navigate_to_pose")
 
         # Publish initial pose immediately, then retry every 2s until AMCL confirms
         self._pose_timer = self.create_timer(2.0, self._publish_initial_pose)
+
         # Start navigation sequence after 5s
         self.create_timer(5.0, self._start)
 
-        self.get_logger().info(
-            f"WaypointNavigator init. Spawn pose: ({self._init_x}, {self._init_y})"
-        )
+        self.get_logger().info(f"\033[96mWaypointNavigator init. Spawn pose: ({self._init_x}, {self._init_y})\033[0m")
 
     def _publish_initial_pose(self):
         msg = PoseWithCovarianceStamped()
@@ -77,13 +71,14 @@ class WaypointNavigator(Node):
         yaw = float(self._init_yaw)
         msg.pose.pose.orientation.z = math.sin(yaw / 2.0)
         msg.pose.pose.orientation.w = math.cos(yaw / 2.0)
+
         # Covariance: moderate uncertainty
         msg.pose.covariance[0]  = 0.25
         msg.pose.covariance[7]  = 0.25
         msg.pose.covariance[35] = 0.07
         self._init_pose_pub.publish(msg)
         self.get_logger().info(
-            f"Published /initialpose ({self._init_x:.2f}, {self._init_y:.2f})",
+            f"\033[90mPublished /initialpose ({self._init_x:.2f}, {self._init_y:.2f})\033[0m",
             throttle_duration_sec=4.0,
         )
 
@@ -92,13 +87,13 @@ class WaypointNavigator(Node):
             return
         self._started = True
 
-        self.get_logger().info("Waiting for navigate_to_pose action server...")
+        self.get_logger().info("\033[93mWaiting for navigate_to_pose action server...\033[0m")
         if not self._action_client.wait_for_server(timeout_sec=120.0):
-            self.get_logger().error("Nav2 not available after 120s.")
+            self.get_logger().error("\033[91mNav2 not available after 120s.\033[0m")
             rclpy.shutdown()
             return
 
-        self.get_logger().info("Nav2 ready — starting waypoint tour in 3s.")
+        self.get_logger().info("\033[92mNav2 ready - starting waypoint tour in 3s.\033[0m")
         self.create_timer(3.0, self._begin_tour)
 
     def _begin_tour(self):
@@ -109,7 +104,7 @@ class WaypointNavigator(Node):
 
     def _send_next_goal(self):
         if self._current_wp >= len(self._waypoints):
-            self.get_logger().info("All waypoints completed!")
+            self.get_logger().info("\033[1;92mAll waypoints completed!\033[0m")
             rclpy.shutdown()
             return
 
@@ -117,8 +112,8 @@ class WaypointNavigator(Node):
         yaw = math.radians(yaw_deg)
 
         self.get_logger().info(
-            f"-> Waypoint {self._current_wp + 1}/{len(self._waypoints)}: "
-            f"({x:.1f}, {y:.1f}, {yaw_deg:.0f}deg)"
+            f"\033[1;95m-> Waypoint {self._current_wp + 1}/{len(self._waypoints)}: "
+            f"({x:.1f}, {y:.1f}, {yaw_deg:.0f}deg)\033[0m"
         )
 
         goal = NavigateToPose.Goal()
@@ -137,7 +132,7 @@ class WaypointNavigator(Node):
     def _goal_response_cb(self, future):
         handle = future.result()
         if not handle.accepted:
-            self.get_logger().warn(f"Waypoint {self._current_wp + 1} rejected, skipping.")
+            self.get_logger().warn(f"\033[91mWaypoint {self._current_wp + 1} rejected, skipping.\033[0m")
             self._current_wp += 1
             self._send_next_goal()
             return
@@ -145,24 +140,22 @@ class WaypointNavigator(Node):
 
     def _feedback_cb(self, feedback_msg):
         self.get_logger().info(
-            f"  Remaining: {feedback_msg.feedback.distance_remaining:.2f}m",
+            f"\033[94m  Remaining: {feedback_msg.feedback.distance_remaining:.2f}m\033[0m",
             throttle_duration_sec=3.0,
         )
 
     def _result_cb(self, future):
         status = future.result().status
         if status == GoalStatus.STATUS_SUCCEEDED:
-            self.get_logger().info(f"Waypoint {self._current_wp + 1} reached!")
+            self.get_logger().info(f"\033[96mWaypoint {self._current_wp + 1} reached!\033[0m")
         else:
-            self.get_logger().warn(f"Waypoint {self._current_wp + 1} status={status}, continuing.")
+            self.get_logger().warn(f"\033[93mWaypoint {self._current_wp + 1} status={status}, continuing.\033[0m")
         self._current_wp += 1
         self._send_next_goal()
-
 
 def main(args=None):
     rclpy.init(args=args)
     rclpy.spin(WaypointNavigator())
-
 
 if __name__ == "__main__":
     main()

@@ -22,7 +22,6 @@ from lifecycle_msgs.msg import Transition  # type: ignore
 
 
 def generate_launch_description():
-
     pkg_nav = get_package_share_directory("robot_navigation")
 
     autostart             = LaunchConfiguration("autostart")
@@ -44,7 +43,7 @@ def generate_launch_description():
         default_value=os.path.join(pkg_nav, "config", "slam_toolbox_params.yaml"),
         description="Path to slam_toolbox params YAML")
 
-    # ── LifecycleNode (NOT plain Node) ────────────────────────────────────────
+    # LifecycleNode
     slam_node = LifecycleNode(
         package="slam_toolbox",
         executable="async_slam_toolbox_node",
@@ -60,7 +59,7 @@ def generate_launch_description():
         ],
     )
 
-    # ── Lifecycle: fire CONFIGURE immediately on autostart ────────────────────
+    # Lifecycle: fire CONFIGURE immediately on autostart
     configure_event = EmitEvent(
         event=ChangeState(
             lifecycle_node_matcher=matches_action(slam_node),
@@ -71,14 +70,14 @@ def generate_launch_description():
         ),
     )
 
-    # ── Lifecycle: fire ACTIVATE once CONFIGURE completes ─────────────────────
+    # Lifecycle: ACTIVATE once CONFIGURE completes
     activate_event = RegisterEventHandler(
         OnStateTransition(
             target_lifecycle_node=slam_node,
             start_state="configuring",
             goal_state="inactive",
             entities=[
-                LogInfo(msg="[LifecycleLaunch] slam_toolbox configured → activating"),
+                LogInfo(msg="\033[92m[LifecycleLaunch] slam_toolbox configured → activating\033[0m"),
                 EmitEvent(
                     event=ChangeState(
                         lifecycle_node_matcher=matches_action(slam_node),

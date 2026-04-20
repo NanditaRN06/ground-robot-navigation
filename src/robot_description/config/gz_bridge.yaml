@@ -6,15 +6,14 @@
 #   GZ_TO_ROS      - Gazebo publishes → ROS 2 subscribes
 #   ROS_TO_GZ      - ROS 2 publishes  → Gazebo subscribes
 
-# ── Velocity command (Nav2 → Gazebo differential drive) ───────────────────
+# Velocity command (Nav2 → Gazebo differential drive)
 - ros_topic_name: "/cmd_vel"
   gz_topic_name:  "/cmd_vel"
   ros_type_name:  "geometry_msgs/msg/Twist"
   gz_type_name:   "gz.msgs.Twist"
   direction: ROS_TO_GZ
 
-# ── TF from odometry (Gazebo → ROS 2 TF tree) ─────────────────────────────
-# The DiffDrive plugin publishes TF to /tf topic
+# TF from odometry (Gazebo → ROS 2 TF tree)
 - ros_topic_name: "/tf"
   gz_topic_name:  "/tf"
   ros_type_name:  "tf2_msgs/msg/TFMessage"
@@ -24,7 +23,7 @@
   subscriber_queue_size: 50
   lazy: false
 
-# ── LiDAR scan (Gazebo → ROS 2 SLAM / Nav2) ───────────────────────────────
+# LiDAR scan (Gazebo → ROS 2 SLAM / Nav2)
 - ros_topic_name: "/scan"
   gz_topic_name:  "/scan"
   ros_type_name:  "sensor_msgs/msg/LaserScan"
@@ -32,7 +31,7 @@
   direction: GZ_TO_ROS
   lazy: false
 
-# ── Odometry (Gazebo diff drive → ROS 2 Nav2/SLAM) ────────────────────────
+# Odometry (Gazebo diff drive → ROS 2 Nav2/SLAM)
 - ros_topic_name: "/odom"
   gz_topic_name:  "/odom"
   ros_type_name:  "nav_msgs/msg/Odometry"
@@ -40,14 +39,14 @@
   direction: GZ_TO_ROS
   lazy: false
 
-# ── IMU (Gazebo → ROS 2) ──────────────────────────────────────────────────
+# IMU (Gazebo → ROS 2)
 - ros_topic_name: "/imu"
   gz_topic_name:  "/imu"
   ros_type_name:  "sensor_msgs/msg/Imu"
   gz_type_name:   "gz.msgs.IMU"
   direction: GZ_TO_ROS
 
-# ── Simulation clock (Gazebo → ROS 2) ────────────────────────────────────
+# Simulation clock (Gazebo → ROS 2)
 - ros_topic_name: "/clock"
   gz_topic_name:  "/clock"
   ros_type_name:  "rosgraph_msgs/msg/Clock"

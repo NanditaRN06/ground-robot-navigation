@@ -8,16 +8,14 @@ Usage:
 """
 
 import os
-from ament_index_python.packages import get_package_share_directory
-from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
-
+from ament_index_python.packages import get_package_share_directory # type: ignore
+from launch import LaunchDescription # type: ignore
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, LogInfo # type: ignore
+from launch.launch_description_sources import PythonLaunchDescriptionSource # type: ignore
+from launch.substitutions import LaunchConfiguration # type: ignore
 
 def generate_launch_description():
-
-    pkg_nav          = get_package_share_directory("robot_navigation")
+    pkg_nav = get_package_share_directory("robot_navigation")
     pkg_nav2_bringup = get_package_share_directory("nav2_bringup")
 
     declare_map = DeclareLaunchArgument(
@@ -37,10 +35,7 @@ def generate_launch_description():
         "autostart", default_value="true",
     )
 
-    # nav2_bringup's bringup_launch.py starts the full Nav2 stack:
-    # map_server, amcl, controller_server, planner_server, bt_navigator,
-    # behavior_server, smoother_server, waypoint_follower, velocity_smoother,
-    # and both lifecycle managers.
+    # Navigation stack: map_server, amcl, controller_server, planner_server, bt_navigator, behavior_server,smoother_server, waypoint_follower, velocity_smoother
     nav2_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_nav2_bringup, "launch", "bringup_launch.py")
@@ -58,5 +53,6 @@ def generate_launch_description():
         declare_params_file,
         declare_use_sim_time,
         declare_autostart,
+        LogInfo(msg=["\033[94m[Navigation Bringup] Starting Nav2 stack on map: \033[0m", LaunchConfiguration("map")]),
         nav2_launch,
     ])

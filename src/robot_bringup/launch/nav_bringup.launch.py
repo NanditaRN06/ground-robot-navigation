@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Navigation Bringup — Gazebo + Nav2 + autonomous waypoint navigation.
+Navigation Bringup - Gazebo + Nav2 + autonomous waypoint navigation.
 
 Usage:
   ros2 launch robot_bringup nav_bringup.launch.py
@@ -10,14 +10,13 @@ Usage:
 
 import os
 
-from ament_index_python.packages import get_package_share_directory
-from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction
-from launch.conditions import IfCondition
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
-from launch_ros.actions import Node
-
+from ament_index_python.packages import get_package_share_directory # type: ignore
+from launch import LaunchDescription # type: ignore     
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction # type: ignore
+from launch.conditions import IfCondition # type: ignore
+from launch.launch_description_sources import PythonLaunchDescriptionSource # type: ignore
+from launch.substitutions import LaunchConfiguration # type: ignore
+from launch_ros.actions import Node # type: ignore
 
 def generate_launch_description():
 
@@ -32,7 +31,7 @@ def generate_launch_description():
     declare_params_file   = DeclareLaunchArgument("params_file",   default_value=os.path.join(pkg_nav, "config", "nav2_params.yaml"))
     declare_auto_navigate = DeclareLaunchArgument("auto_navigate", default_value="true",  description="Auto-run waypoint navigator")
 
-    # ── Gazebo + robot ────────────────────────────────────────────────────
+    # Gazebo + robot
     sim_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_desc, "launch", "robot_gazebo.launch.py")
@@ -45,7 +44,7 @@ def generate_launch_description():
         }.items(),
     )
 
-    # ── Nav2 — delayed 25s for Gazebo to load AND robot to be spawned ────
+    # Nav2 - delayed 25s for Gazebo to load AND robot to be spawned
     # robot_gazebo.launch.py delays spawn by 15s; Nav2 needs the odom frame
     # which only appears after DiffDrive activates post-spawn.
     nav2_launch = TimerAction(
@@ -65,7 +64,7 @@ def generate_launch_description():
         ],
     )
 
-    # ── Waypoint navigator — delayed 60s to let Nav2 fully activate ───────
+    # Waypoint navigator - delayed 60s to let Nav2 fully activate
     waypoint_navigator = TimerAction(
         period=60.0,
         actions=[
