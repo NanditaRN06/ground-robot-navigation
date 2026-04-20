@@ -1,1 +1,0 @@
-/mnt/c/Users/nanda/Downloads/ros2_ws/src/robot_bringup/scripts/waypoint_navigator.py
