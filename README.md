@@ -141,7 +141,7 @@ Open **4 separate terminals**, all with `source ~/ros2_ws/install/setup.bash`.
 
 **Terminal 1 — Gazebo + SLAM** (no RViz, reduces GPU load):
 ```bash
-source ~/ros2_ws/install/setup.bash
+source install/setup.bash
 ros2 launch robot_bringup slam_bringup.launch.py world:=house
 ```
 
@@ -149,13 +149,13 @@ Wait ~5 seconds for Gazebo to fully load and SLAM to activate, then:
 
 **Terminal 2 — RViz2** (launch after Gazebo is up):
 ```bash
-source ~/ros2_ws/install/setup.bash
+source install/setup.bash
 rviz2 -d src/robot_description/config/slam.rviz
 ```
 
 **Terminal 3 — Teleop** (drive the robot to build the map):
 ```bash
-source ~/ros2_ws/install/setup.bash
+source install/setup.bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard \
   --ros-args --remap cmd_vel:=/cmd_vel
 ```
@@ -173,14 +173,13 @@ Drive around all rooms until the occupancy grid fills in.
 
 **Terminal 4 — Save the map** (when mapping is complete):
 ```bash
-source ~/ros2_ws/install/setup.bash
-mkdir -p ~/maps
+source install/setup.bash
 ros2 run nav2_map_server map_saver_cli \
-  -f ~/maps/house_map \
+  -f src/robot_navigation/maps/<file_name> \
   --ros-args -p use_sim_time:=true
 ```
 
-Saves `~/maps/house_map.yaml` + `~/maps/house_map.pgm`.
+Saves `src/robot_navigation/maps/<file_name>.yaml` + `src/robot_navigation/maps/<file_name>.pgm`.
 
 ---
 
@@ -188,16 +187,16 @@ Saves `~/maps/house_map.yaml` + `~/maps/house_map.pgm`.
 
 **Terminal 1 — Gazebo + Nav2** (uses the saved map):
 ```bash
-source ~/ros2_ws/install/setup.bash
+source install/setup.bash
 ros2 launch robot_bringup nav_bringup.launch.py \
   world:=house \
-  map:=$HOME/maps/house_map.yaml
+  map:=src/robot_navigation/maps/<file_name>.yaml
 ```
 
 **Terminal 2 — RViz2**:
 ```bash
-source ~/ros2_ws/install/setup.bash
-rviz2 -d ~/ros2_ws/src/robot_description/config/robot.rviz
+source install/setup.bash
+rviz2 -d src/robot_description/config/robot.rviz
 ```
 
 In RViz2:
