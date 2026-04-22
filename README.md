@@ -100,8 +100,8 @@ sudo apt install ros-jazzy-ros-gz
 # SLAM Toolbox
 sudo apt install ros-jazzy-slam-toolbox
 
-# Nav2
-sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup
+# Nav2 + Collision Monitor
+sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-nav2-collision-monitor
 
 # Additional tools
 sudo apt install ros-jazzy-xacro
@@ -113,6 +113,16 @@ sudo apt install ros-jazzy-nav2-rviz-plugins
 
 pip install catkin_pkg empy lark transforms3d
 ```
+
+---
+
+## Core Features
+
+- **Autonomous Navigation**: Full Nav2 stack integration (A* Global Planner, DWB Local Planner).
+- **Emergency Safety**: `nav2_collision_monitor` provides a "slowdown" and "stop" zone around the robot to prevent collisions even during autonomous flight.
+- **Automated Waypoint Tour**: Custom Python navigator that executes a pre-planned tour of the house (Living Room → Kitchen → Bedroom).
+- **Gazebo Harmonic Integration**: High-fidelity simulation with GPU-accelerated LiDAR and IMU noise modeling.
+- **Dual-Phase Logic**: Unified launch system for Phase 1 (Mapping) and Phase 2 (Navigation).
 
 > **Build environment**: Always build in a plain terminal with only
 > `source /opt/ros/jazzy/setup.bash` — never inside a Python venv.
@@ -128,7 +138,7 @@ pip install catkin_pkg empy lark transforms3d
 # Source ROS 2 (NOT inside a venv)
 source /opt/ros/jazzy/setup.bash
 
-cd ~/ros2_ws
+cd ground-robot-navigation  # Stay in this path for the rest of the project
 colcon build --symlink-install
 source install/setup.bash
 ```
@@ -137,12 +147,12 @@ source install/setup.bash
 
 ### Step 2 – Phase 1: SLAM (Build the Map)
 
-Open **4 separate terminals**, all with `source ~/ros2_ws/install/setup.bash`.
+Open **4 separate terminals**, all with `source install/setup.bash`.
 
 **Terminal 1 — Gazebo + SLAM** (no RViz, reduces GPU load):
 ```bash
 source install/setup.bash
-ros2 launch robot_bringup slam_bringup.launch.py world:=house
+ros2 launch robot_bringup slam_bringup.launch.py world:=house # or world:=office
 ```
 
 Wait ~5 seconds for Gazebo to fully load and SLAM to activate, then:
@@ -174,6 +184,7 @@ Drive around all rooms until the occupancy grid fills in.
 **Terminal 4 — Save the map** (when mapping is complete):
 ```bash
 source install/setup.bash
+mkdir src/robot_navigation/maps # Create the folder if it does not exist
 ros2 run nav2_map_server map_saver_cli \
   -f src/robot_navigation/maps/<file_name> \
   --ros-args -p use_sim_time:=true
@@ -185,12 +196,14 @@ Saves `src/robot_navigation/maps/<file_name>.yaml` + `src/robot_navigation/maps/
 
 ### Step 3 – Phase 2: Autonomous Navigation
 
+> Make sure to have stopped the previous terminals before running this step.
+
 **Terminal 1 — Gazebo + Nav2** (uses the saved map):
 ```bash
 source install/setup.bash
 ros2 launch robot_bringup nav_bringup.launch.py \
-  world:=house \
-  map:=src/robot_navigation/maps/<file_name>.yaml
+  world:=<world_name> \
+  map:=src/robot_navigation/maps/<map_name>.yaml
 ```
 
 **Terminal 2 — RViz2**:
@@ -205,12 +218,30 @@ In RViz2:
 
 ---
 
+### **Autonomous Waypoint Tour**
+
+The project includes a custom automation script that drives the robot through a multi-room tour. This starts automatically 30 seconds after `nav_bringup.launch.py`.
+
+To run it manually or restart the tour:
+```bash
+ros2 run robot_bringup waypoint_navigator.py
+```
+
+| Room | Coordinates (x, y) |
+|---|---|
+| **Living Room** | (3.0, 1.0) |
+| **Kitchen** | (3.0, 3.0) |
+| **Bedroom** | (1.0, 3.0) |
+| **Start/Base** | (1.0, 1.0) |
+
+---
+
 ### Step 4 – Send Goals Programmatically
 
 ```bash
 # Single goal (x=5.0, y=3.0, yaw=0)
 ros2 run robot_bringup send_goal.py \
-  --ros-args -p x:=5.0 -p y:=3.0 -p yaw:=0.0
+  --ros-args -p x:=<x_coordinate> -p y:=<y_coordinate> -p yaw:=<yaw_orientation_in_radians>
 
 # Multi-room waypoint tour (living room → kitchen → bedroom → start)
 ros2 run robot_bringup waypoint_navigator.py
@@ -275,31 +306,6 @@ ros2 run tf2_tools view_frames
 
 ---
 
-## Optional Advanced Features
-
-### Compare A* vs Dijkstra
-
-Edit `nav2_params.yaml` under `planner_server → GridBased`:
-```yaml
-GridBased:
-  use_astar: true   # true = A*,  false = Dijkstra
-```
-
-### Test in Office World
-
-```bash
-ros2 launch robot_bringup slam_bringup.launch.py world:=office
-```
-
-### Multi-Room Waypoint Navigation
-
-The `waypoint_navigator.py` script demonstrates autonomous navigation between:
-- Living Room → Kitchen → Bedroom → Back to Start
-
-Edit `DEFAULT_WAYPOINTS` in the script to add custom rooms.
-
----
-
 ## Troubleshooting
 
 | Symptom | Fix |
@@ -311,28 +317,9 @@ Edit `DEFAULT_WAYPOINTS` in the script to add custom rooms.
 | RViz hangs | Launch RViz in a separate terminal, 5s after Gazebo starts |
 | `colcon build` fails with catkin_pkg | Build outside virtualenv: `source /opt/ros/jazzy/setup.bash` only |
 
+## Authors
 
-
-
-- nandana
-to run
-
-pkill -9 -f gz; pkill -9 -f nav2; pkill -9 -f amcl; pkill -9 -f robot_state
-ros2 daemon stop; sleep 2; ros2 daemon start
-
-
-
-cd /mnt/c/Users/nanda/Downloads/ros2_ws
-source /opt/ros/jazzy/setup.bash
-colcon build --symlink-install
-source install/setup.bash
-export ROS_DOMAIN_ID=42
-ros2 launch robot_bringup slam_bringup.launch.py world:=house
-
-for teleop 
-cd /mnt/c/Users/nanda/Downloads/ros2_ws
-source /mnt/c/Users/nanda/Downloads/ros2_ws/install/setup.bash
-export ROS_DOMAIN_ID=42
-ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=/cmd_vel
-
-
+- PES2UG23CS365 - [Nandita R Nadig](https://github.com/NanditaRN06)
+- PES2UG23CS913 - [Nandana Mathew](https://github.com/nandana-mathew)
+- PES2UG23CS369 - [Naveen S](https://github.com/nh-44)
+- PES2UG23CS366 - [Likhith Chandra N S](https://github.com/PES2UG23CS366-NSLC)
