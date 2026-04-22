@@ -17,4 +17,5 @@ __pycache__/
 .DS_Store
 
 # maps
-.pgm
+src/robot_navigation/maps/*
+!src/robot_navigation/maps/.gitkeep
