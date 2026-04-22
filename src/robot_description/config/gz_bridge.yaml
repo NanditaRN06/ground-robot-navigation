@@ -1,0 +1,61 @@
+# ros_gz_bridge configuration for Ground Robot
+# ROS 2 Jazzy <--> Gazebo Harmonic
+#
+# Direction values:
+#   BIDIRECTIONAL  - both ways
+#   GZ_TO_ROS      - Gazebo publishes → ROS 2 subscribes
+#   ROS_TO_GZ      - ROS 2 publishes  → Gazebo subscribes
+
+# Velocity command (Nav2 → Gazebo differential drive)
+- ros_topic_name: "/cmd_vel"
+  gz_topic_name:  "/cmd_vel"
+  ros_type_name:  "geometry_msgs/msg/Twist"
+  gz_type_name:   "gz.msgs.Twist"
+  direction: ROS_TO_GZ
+
+# TF from odometry (Gazebo → ROS 2 TF tree)
+- ros_topic_name: "/tf"
+  gz_topic_name:  "/tf"
+  ros_type_name:  "tf2_msgs/msg/TFMessage"
+  gz_type_name:   "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+  publisher_queue_size: 50
+  subscriber_queue_size: 50
+  lazy: false
+
+# LiDAR scan (Gazebo → ROS 2 SLAM / Nav2)
+- ros_topic_name: "/scan"
+  gz_topic_name:  "/scan"
+  ros_type_name:  "sensor_msgs/msg/LaserScan"
+  gz_type_name:   "gz.msgs.LaserScan"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# Odometry (Gazebo diff drive → ROS 2 Nav2/SLAM)
+- ros_topic_name: "/odom"
+  gz_topic_name:  "/odom"
+  ros_type_name:  "nav_msgs/msg/Odometry"
+  gz_type_name:   "gz.msgs.Odometry"
+  direction: GZ_TO_ROS
+  lazy: false
+
+# IMU (Gazebo → ROS 2)
+- ros_topic_name: "/imu"
+  gz_topic_name:  "/imu"
+  ros_type_name:  "sensor_msgs/msg/Imu"
+  gz_type_name:   "gz.msgs.IMU"
+  direction: GZ_TO_ROS
+
+# Simulation clock (Gazebo → ROS 2)
+- ros_topic_name: "/clock"
+  gz_topic_name:  "/clock"
+  ros_type_name:  "rosgraph_msgs/msg/Clock"
+  gz_type_name:   "gz.msgs.Clock"
+  direction: GZ_TO_ROS
+
+# Joint states (Gazebo → ROS 2)
+- ros_topic_name: "/joint_states"
+  gz_topic_name:  "/joint_states"
+  ros_type_name:  "sensor_msgs/msg/JointState"
+  gz_type_name:   "gz.msgs.Model"
+  direction: GZ_TO_ROS

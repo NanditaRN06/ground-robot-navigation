@@ -1,14 +1,21 @@
-# ROS2 / colcon
+# Build outputs
 build/
 install/
 log/
 
-# Python
+# Python cache
 __pycache__/
 *.pyc
 
-# VS Code
+# Text editors and IDEs
 .vscode/
+.idea/
+*.swp
+*.swo
 
-# OS
+# macOS
 .DS_Store
+
+# maps
+src/robot_navigation/maps/*
+!src/robot_navigation/maps/.gitkeep
