@@ -97,7 +97,6 @@ class WaypointNavigator(Node):
         self.create_timer(3.0, self._begin_tour)
 
     def _begin_tour(self):
-        self.destroy_timer(self._timers[-1])
         # Stop retrying initial pose
         self._pose_timer.cancel()
         self._send_next_goal()

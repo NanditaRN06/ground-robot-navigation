@@ -64,9 +64,9 @@ def generate_launch_description():
         ],
     )
 
-    # Waypoint navigator - delayed 60s to let Nav2 fully activate
+    # Waypoint navigator - delayed 30s to let Nav2 fully activate (starts 5s after Nav2)
     waypoint_navigator = TimerAction(
-        period=60.0,
+        period=30.0,
         actions=[
             Node(
                 package="robot_bringup",

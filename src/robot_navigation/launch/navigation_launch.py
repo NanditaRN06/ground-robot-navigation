@@ -8,6 +8,7 @@ Usage:
 """
 
 import os
+from launch_ros.actions import Node # type: ignore
 from ament_index_python.packages import get_package_share_directory # type: ignore
 from launch import LaunchDescription # type: ignore
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, LogInfo # type: ignore
@@ -35,7 +36,7 @@ def generate_launch_description():
         "autostart", default_value="true",
     )
 
-    # Navigation stack: map_server, amcl, controller_server, planner_server, bt_navigator, behavior_server,smoother_server, waypoint_follower, velocity_smoother
+    # Nav2 Bringup (AMCL + Navigation stack)
     nav2_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_nav2_bringup, "launch", "bringup_launch.py")
@@ -48,6 +49,15 @@ def generate_launch_description():
         }.items(),
     )
 
+    # Collision Monitor - needs to be launched explicitly as it's not in bringup_launch.py
+    collision_monitor_node = Node(
+        package='nav2_collision_monitor',
+        executable='collision_monitor',
+        name='collision_monitor',
+        output='screen',
+        parameters=[LaunchConfiguration("params_file")],
+    )
+
     return LaunchDescription([
         declare_map,
         declare_params_file,
@@ -55,4 +65,5 @@ def generate_launch_description():
         declare_autostart,
         LogInfo(msg=["\033[94m[Navigation Bringup] Starting Nav2 stack on map: \033[0m", LaunchConfiguration("map")]),
         nav2_launch,
+        collision_monitor_node,
     ])
