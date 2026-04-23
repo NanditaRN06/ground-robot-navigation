@@ -131,11 +131,16 @@ class WaypointNavigator(Node):
     def _goal_response_cb(self, future):
         handle = future.result()
         if not handle.accepted:
-            self.get_logger().warn(f"\033[91mWaypoint {self._current_wp + 1} rejected, skipping.\033[0m")
-            self._current_wp += 1
-            self._send_next_goal()
+            self.get_logger().warn(f"\033[91mWaypoint {self._current_wp + 1} rejected (Nav2 might not be fully active yet). Retrying in 2s...\033[0m")
+            self._retry_timer = self.create_timer(2.0, self._retry_current_goal)
             return
         handle.get_result_async().add_done_callback(self._result_cb)
+
+    def _retry_current_goal(self):
+        if hasattr(self, '_retry_timer') and self._retry_timer is not None:
+            self._retry_timer.cancel()
+            self._retry_timer = None
+        self._send_next_goal()
 
     def _feedback_cb(self, feedback_msg):
         self.get_logger().info(
